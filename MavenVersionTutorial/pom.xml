@@ -156,13 +156,13 @@
     </reporting>
 
     <scm>
-        <url>ssh://stash.nxsys.ltd:7999/nxpay/nxpay.git</url>
-        <connection>ssh://stash.nxsys.ltd:7999/nxpay/nxpay.git</connection>
+        <connection>scm:git:http://none</connection>
+        <developerConnection>scm:git:https://none</developerConnection>
+        <url>scm:git:https://none</url>
     </scm>
 
     <build>
-        <!--<finalName>${project.artifactId}</finalName>-->
-        <finalName>${project.artifactId}-${project.version}-${buildNumber}</finalName>
+        <finalName>${project.artifactId}.${project.version}.${buildNumber}</finalName>
 
         <plugins>
             <plugin>
@@ -178,21 +178,20 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <shortRevisionLength>5</shortRevisionLength>
-                    <!--<format>{0,date,yyyy-MM-dd_HH-mm}_{1,number}</format>-->
-                    <!--<items>-->
+                    <shortRevisionLength>7</shortRevisionLength>
+                    <!--<format>{0,date,yyyy-MM-dd_HH-mm}-{1}</format>-->
+                    <format>{0}</format>
+                    <items>
                         <!--<item>timestamp</item>-->
-                        <!--<item>buildNumber0</item>-->
-                    <!--</items>-->
-                    <!--<revisionOnScmFailure>-->
-                        <!--not_available-->
-                    <!--</revisionOnScmFailure>-->
+                        <item>scmVersion</item>
+                    </items>
+                    <revisionOnScmFailure>
+                        not_available
+                    </revisionOnScmFailure>
 
                     <doCheck>false</doCheck>
                     <doUpdate>false</doUpdate>
-                    <!--<providerImplementations>-->
-                    <!--<svn>javasvn</svn>-->
-                    <!--</providerImplementations>-->
+
                 </configuration>
             </plugin>
             <plugin>
