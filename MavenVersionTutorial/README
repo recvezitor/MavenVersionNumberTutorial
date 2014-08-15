@@ -1,0 +1,4 @@
+git diff -> find affected modules
+mvn versions:set -DnewVersion=RC-1  (dunno how to set from root pom based on groupId/artifactId)
+mvn versions:commit
+mvn versions:update-propeties -DincludeProperties=citadel.properties,bhub.properties
