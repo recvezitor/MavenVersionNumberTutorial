@@ -4,12 +4,11 @@
     <parent>
         <artifactId>bank-processors</artifactId>
         <groupId>com.dimas</groupId>
-        <version>1.0</version>
+        <version>9.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>bank-hub</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
     <name>bank-hub</name>
 
     <dependencies>
